@@ -1,0 +1,5 @@
+# Notebook cache
+.ipynb_checkpoints/
+
+# The datasets folder
+sign_datasets/
