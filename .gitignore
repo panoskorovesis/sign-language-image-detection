@@ -3,3 +3,6 @@
 
 # The datasets folder
 sign_datasets/
+
+# Python venv
+.venv/
