@@ -22,6 +22,11 @@ echo "Installing requirements"
 pip3 install -r requirements.txt
 echo "Requirements installed"
 
+# Create a new python kernel
+echo "Will create a new kernel for the project named 'SL Detection'"
+python -m ipykernel install --user --name=sl_detection --display-name "SL Detection"
+echo "Kernel created"
+
 # Finally download the dataset from kaggle
 echo "Will download dataset from: https://www.kaggle.com/datasets/ahmedkhanak1995/sign-language-gesture-images-dataset/data"
 mkdir -p sign_datasets/sign-language-gesture-images-dataset
