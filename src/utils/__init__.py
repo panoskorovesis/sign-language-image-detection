@@ -1,1 +1,3 @@
-from .dataset_utils import load_dataset
+from .numpy_dataset_utils import load_dataset
+from .keras_dataset_utils import get_class_count
+from .keras_dataset_utils import plot_class_distribution
