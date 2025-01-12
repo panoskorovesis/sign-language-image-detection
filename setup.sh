@@ -42,3 +42,18 @@ echo "Extraction completed"
 echo "Will remove zip file"
 rm ./sign_datasets/sign-language-gesture-images-dataset.zip
 echo "Setup completed"
+
+echo "Will download datset from https://www.kaggle.com/code/alfathterry/american-sign-language-real-time-detection"
+mkdir -p sign_datasets/american_sign_language_dataset
+curl -L -o sign_datasets/american_sign_language.zip https://www.kaggle.com/api/v1/datasets/download/kapillondhe/american-sign-language
+echo "Download Completed. Will unzip"
+
+# Unzip it
+echo "Will unzip dataset to sign_datasets/american_sign_language"
+unzip -oq ./sign_datasets/american_sign_language -d "sign_datasets/american_sign_language_dataset"
+echo "Extraction completed"
+
+# Finally remove the zip
+echo "Will remove zip file"
+rm ./sign_datasets/american_sign_language.zip
+echo "Setup completed"
