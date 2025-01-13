@@ -1,6 +1,9 @@
 # Notebook cache
 .ipynb_checkpoints/
 
+# Python cache
+__pycache__/
+
 # The datasets folder
 sign_datasets/
 
