@@ -27,7 +27,11 @@ echo "Will create a new kernel for the project named 'SL Detection'"
 python -m ipykernel install --user --name=sl_detection --display-name "SL Detection"
 echo "Kernel created"
 
-# Finally download the dataset from kaggle
+# Finally download the datasets
+
+#########################
+# SIGN LANGUAGE GESTURE #
+#########################
 echo "Will download dataset from: https://www.kaggle.com/datasets/ahmedkhanak1995/sign-language-gesture-images-dataset/data"
 mkdir -p sign_datasets/sign-language-gesture-images-dataset
 curl -L -o ./sign_datasets/sign-language-gesture-images-dataset.zip https://www.kaggle.com/api/v1/datasets/download/ahmedkhanak1995/sign-language-gesture-images-dataset
@@ -43,6 +47,9 @@ echo "Will remove zip file"
 rm ./sign_datasets/sign-language-gesture-images-dataset.zip
 echo "Setup completed"
 
+##########################
+# AMERICAN SIGN LANGUAGE #
+##########################
 echo "Will download datset from https://www.kaggle.com/code/alfathterry/american-sign-language-real-time-detection"
 mkdir -p sign_datasets/american_sign_language_dataset
 curl -L -o sign_datasets/american_sign_language.zip https://www.kaggle.com/api/v1/datasets/download/kapillondhe/american-sign-language
@@ -56,4 +63,21 @@ echo "Extraction completed"
 # Finally remove the zip
 echo "Will remove zip file"
 rm ./sign_datasets/american_sign_language.zip
+echo "Setup completed"
+
+#########################
+# HAGRID CLASSIFICATION #
+#########################
+echo "Will download dataset from "
+curl -L -o sign_datasets/hagrid-classification-512p.zip https://www.kaggle.com/api/v1/datasets/download/innominate817/hagrid-classification-512p
+echo "Download Completed. Will unzip"
+
+# Unzip it
+echo "Will unzip dataset to sign_datasets/hagrid_classification_dataset"
+unzip -oq ./sign_datasets/hagrid-classification-512p.zip -d "sign_datasets/hagrid-classification-512p.zip_dataset"
+echo "Extraction completed"
+
+# Finally remove the zip
+echo "Will remove zip file"
+rm ./sign_datasets/hagrid-classification-512p.zip
 echo "Setup completed"
