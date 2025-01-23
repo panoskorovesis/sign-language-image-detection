@@ -81,3 +81,21 @@ echo "Extraction completed"
 echo "Will remove zip file"
 rm ./sign_datasets/hagrid-classification-512p.zip
 echo "Setup completed"
+
+##################################
+# 27-class-sign-language-dataset #
+##################################
+echo "Will download datset from https://www.kaggle.com/api/v1/datasets/download/ardamavi/27-class-sign-language-dataset"
+mkdir -p sign_datasets/27-class-sign-language-dataset
+curl -L -o sign_datasets/27-class-sign-language-dataset.zip https://www.kaggle.com/api/v1/datasets/download/ardamavi/27-class-sign-language-dataset
+echo "Download Completed. Will unzip"
+
+# Unzip it
+echo "Will unzip dataset to sign_datasets/27-class-sign-language-dataset"
+unzip -oq ./sign_datasets/27-class-sign-language-dataset -d "sign_datasets/27-class-sign-language-dataset"
+echo "Extraction completed"
+
+# Finally remove the zip
+echo "Will remove zip file"
+rm ./sign_datasets/27-class-sign-language-dataset.zip
+echo "Setup completed"
