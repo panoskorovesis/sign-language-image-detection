@@ -74,7 +74,7 @@ echo "Download Completed. Will unzip"
 
 # Unzip it
 echo "Will unzip dataset to sign_datasets/hagrid_classification_dataset"
-unzip -oq ./sign_datasets/hagrid-classification-512p.zip -d "sign_datasets/hagrid-classification-512p.zip_dataset"
+unzip -oq ./sign_datasets/hagrid-classification-512p.zip -d "sign_datasets/hagrid-classification-512p_dataset"
 echo "Extraction completed"
 
 # Finally remove the zip
