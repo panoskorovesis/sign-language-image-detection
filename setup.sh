@@ -32,20 +32,20 @@ echo "Kernel created"
 #########################
 # SIGN LANGUAGE GESTURE #
 #########################
-echo "Will download dataset from: https://www.kaggle.com/datasets/ahmedkhanak1995/sign-language-gesture-images-dataset/data"
-mkdir -p sign_datasets/sign-language-gesture-images-dataset
-curl -L -o ./sign_datasets/sign-language-gesture-images-dataset.zip https://www.kaggle.com/api/v1/datasets/download/ahmedkhanak1995/sign-language-gesture-images-dataset
-echo "Download Completed. Will unzip"
+# echo "Will download dataset from: https://www.kaggle.com/datasets/ahmedkhanak1995/sign-language-gesture-images-dataset/data"
+# mkdir -p sign_datasets/sign-language-gesture-images-dataset
+# curl -L -o ./sign_datasets/sign-language-gesture-images-dataset.zip https://www.kaggle.com/api/v1/datasets/download/ahmedkhanak1995/sign-language-gesture-images-dataset
+# echo "Download Completed. Will unzip"
 
-# Unzip it
-echo "Will unzip dataset to sign_datasets/sign-language-gesture-images-dataset"
-unzip -oq ./sign_datasets/sign-language-gesture-images-dataset.zip -d "sign_datasets/sign-language-gesture-images-dataset"
-echo "Extraction completed"
+# # Unzip it
+# echo "Will unzip dataset to sign_datasets/sign-language-gesture-images-dataset"
+# unzip -oq ./sign_datasets/sign-language-gesture-images-dataset.zip -d "sign_datasets/sign-language-gesture-images-dataset"
+# echo "Extraction completed"
 
-# Finally remove the zip
-echo "Will remove zip file"
-rm ./sign_datasets/sign-language-gesture-images-dataset.zip
-echo "Setup completed"
+# # Finally remove the zip
+# echo "Will remove zip file"
+# rm ./sign_datasets/sign-language-gesture-images-dataset.zip
+# echo "Setup completed"
 
 ##########################
 # AMERICAN SIGN LANGUAGE #
@@ -135,3 +135,27 @@ echo "Extraction completed"
 echo "Will remove zip file"
 rm ./sign_datasets/kslc-kenyan-sign-language-classification-challenge.zip 
 echo "Setup completed"
+
+#############################
+# Azerbaijan Sign Language  #
+#############################
+echo "Will download datset from https://www.kaggle.com/api/v1/datasets/download/aykhannazimzada/azsl-dataset"
+mkdir -p sign_datasets/bengali-sign-language-dataset
+curl -L -o sign_datasets/azsl-dataset.zip https://www.kaggle.com/api/v1/datasets/download/aykhannazimzada/azsl-dataset
+echo "Download Completed. Will unzip"
+
+# Unzip it
+echo "Will unzip dataset to sign_datasets/bengali-sign-language-dataset"
+unzip -oq ./sign_datasets/azsl-dataset -d "sign_datasets"
+echo "Extraction completed"
+
+# Finally remove the zip
+echo "Will remove zip file"
+rm ./sign_datasets/azsl-dataset.zip
+echo "Setup completed"
+
+# Delete all the useless files and folders
+echo "Cleaning AzSL Dataset"
+find "./sign_datasets/AzSL Dataset" -type f ! \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.ppm" -o -iname "*.bmp" -o -iname "*.pgm" -o -iname "*.tif" -o -iname "*.tiff" -o -iname "*.webp" \) -delete
+find "./sign_datasets/AzSL Dataset" -type d -empty -delete
+find "./sign_datasets/AzSL Dataset" -mindepth 1 -maxdepth 1 -type d ! -regex '.*/[A-Z]' -exec rm -rf {} +
