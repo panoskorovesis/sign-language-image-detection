@@ -99,3 +99,39 @@ echo "Extraction completed"
 echo "Will remove zip file"
 rm ./sign_datasets/27-class-sign-language-dataset.zip
 echo "Setup completed"
+
+##################################
+# Bengali Sign Language Dataset  #
+##################################
+echo "Will download datset from https://www.kaggle.com/api/v1/datasets/download/muntakimrafi/bengali-sign-language-dataset"
+mkdir -p sign_datasets/bengali-sign-language-dataset
+curl -L -o sign_datasets/bengali-sign-language-dataset.zip https://www.kaggle.com/api/v1/datasets/download/muntakimrafi/bengali-sign-language-dataset
+echo "Download Completed. Will unzip"
+
+# Unzip it
+echo "Will unzip dataset to sign_datasets/bengali-sign-language-dataset"
+unzip -oq ./sign_datasets/bengali-sign-language-dataset -d "sign_datasets/bengali-sign-language-dataset"
+echo "Extraction completed"
+
+# Finally remove the zip
+echo "Will remove zip file"
+rm ./sign_datasets/bengali-sign-language-dataset.zip
+echo "Setup completed"
+
+################################
+# Kenyan Sign Language Dataset #
+################################
+echo "Will download datset from https://www.kaggle.com/api/v1/datasets/download/gauravduttakiit/kslc-kenyan-sign-language-classification-challenge"
+mkdir -p sign_datasets/kslc-kenyan-sign-language-dataset
+curl -L -o sign_datasets/kslc-kenyan-sign-language-classification-challenge.zip https://www.kaggle.com/api/v1/datasets/download/gauravduttakiit/kslc-kenyan-sign-language-classification-challenge
+echo "Download Completed. Will unzip"
+
+# Unzip it
+echo "Will unzip dataset to sign_datasets/kslc-kenyan-sign-language-dataset"
+unzip -oq ./sign_datasets/kslc-kenyan-sign-language-classification-challenge -d "sign_datasets/kslc-kenyan-sign-language-dataset"
+echo "Extraction completed"
+
+# Finally remove the zip
+echo "Will remove zip file"
+rm ./sign_datasets/kslc-kenyan-sign-language-classification-challenge.zip 
+echo "Setup completed"
