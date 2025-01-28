@@ -9,3 +9,5 @@ sign_datasets/
 
 # Python venv
 .venv/
+
+src/nn_and_cnn/images/plots
