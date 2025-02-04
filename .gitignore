@@ -11,3 +11,4 @@ sign_datasets/
 .venv/
 
 src/nn_and_cnn/images/plots
+src/nn_and_cnn/numpy/plots
