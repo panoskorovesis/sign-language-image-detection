@@ -140,12 +140,12 @@ echo "Setup completed"
 # Azerbaijan Sign Language  #
 #############################
 echo "Will download datset from https://www.kaggle.com/api/v1/datasets/download/aykhannazimzada/azsl-dataset"
-mkdir -p sign_datasets/bengali-sign-language-dataset
+mkdir -p sign_datasets/azerbaijan-sign-language-dataset
 curl -L -o sign_datasets/azsl-dataset.zip https://www.kaggle.com/api/v1/datasets/download/aykhannazimzada/azsl-dataset
 echo "Download Completed. Will unzip"
 
 # Unzip it
-echo "Will unzip dataset to sign_datasets/bengali-sign-language-dataset"
+echo "Will unzip dataset to sign_datasets/ajerbaijan-sign-language-dataset"
 unzip -oq ./sign_datasets/azsl-dataset -d "sign_datasets"
 echo "Extraction completed"
 
