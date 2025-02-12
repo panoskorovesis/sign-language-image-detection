@@ -1,4 +1,4 @@
-# Sing Language Image Detection
+# Sign Language Image Detection
 
 ## Setup
 
