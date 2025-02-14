@@ -42,3 +42,34 @@ def plot_class_distribution(dataset, title: str):
     # Adjust layout to make room for rotated labels
     plt.tight_layout()
     plt.show()
+
+
+def plot_keras_history(history):
+    """Plot the loss and accuracy of the models
+    """
+    import pandas as pd
+
+    # Covert the object to a dataframe for easier access
+    history_df = pd.DataFrame(history.history)
+
+    #############
+    # loss plot #
+    #############
+    plt.subplot(1, 2, 1)
+    sns.lineplot(data=history_df[['loss', 'val_loss']], palette='tab10', dashes=False)
+    plt.title('Model Loss')
+    plt.ylabel('Loss')
+    plt.xlabel('Epoch')
+    plt.legend(['Train Loss', 'Validation Loss'])
+
+    #################
+    # accuracy plot #
+    #################
+    plt.subplot(1, 2, 2)
+    sns.lineplot(data=history_df[['accuracy', 'val_accuracy']], palette='tab10', dashes=False)
+    plt.title('Model Accuracy')
+    plt.ylabel('Model Accuracy')
+    plt.xlabel('Epoch')
+    plt.legend(['Train Accuracy', 'Validation Accuracy'])
+
+    plt.show()
