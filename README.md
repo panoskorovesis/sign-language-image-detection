@@ -1,5 +1,16 @@
 # Sign Language Image Detection
 
+## Authors
+
+Fourfouris Ioannis
+
+Korovesis Panagiotis
+
+Myrto Potamiti
+
+## Report
+
+For an __analytical report__ of our work please look at [Report/Sign_Language_Detection_Report.pdf](Report/Sign_Language_Detection_Report.pdf)
 
 
 ## Setup
@@ -9,11 +20,6 @@ To _create the virtual environment and download the dataset_ execute the followi
 ```sh
 bash setup.sh
 ```
-
-## Report
-
-For an __analytical report__ of our work please look at [Report/Sign_Language_Detection_Report.pdf](Report/Sign_Language_Detection_Report.pdf)
-
 ## Project Structure
 
 The structure of the project can be seen bellow
