@@ -67,9 +67,6 @@ The structure of the project can be seen bellow
     │   └── sing_language_gesture_transfer_learning.ipynb
     └── utils
         ├── __init__.py
-        │   ├── __init__.cpython-312.pyc
-        │   ├── keras_dataset_utils.cpython-312.pyc
-        │   └── numpy_dataset_utils.cpython-312.pyc
         ├── hagrid_subset_generator.ipynb
         ├── keras_dataset_utils.py
         └── numpy_dataset_utils.py
